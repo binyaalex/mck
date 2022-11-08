@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ScrollingCarousel } from "@trendyol-js/react-carousel";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import TollIcon from '@mui/icons-material/Toll';
 
 import { getMerchants } from "../../redux/actions-exporter";
 
@@ -17,40 +18,52 @@ export default function HotBenefitList(props) {
   const merchants = useSelector((state) => state.merchant.merchants);
   const hotBenefitsArr = [
     {
-        title: "עידן אלתרמן",
-        price: 79,
-        image: hotBenefit1,
-        category: "סטנדאפ",
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
     {
       title: "עידן אלתרמן",
       price: 79,
       image: hotBenefit1,
       category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
     {
       title: "עידן אלתרמן",
       price: 79,
       image: hotBenefit1,
       category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
     {
       title: "עידן אלתרמן",
       price: 79,
       image: hotBenefit1,
       category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
     {
       title: "עידן אלתרמן",
       price: 79,
       image: hotBenefit1,
       category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
     {
       title: "עידן אלתרמן",
       price: 79,
       image: hotBenefit1,
       category: "סטנדאפ",
+      coins: 20,
+      new: 50
     },
   ]
   useEffect(() => {
@@ -132,32 +145,38 @@ export default function HotBenefitList(props) {
         <ul className="categoryList">
           {hotBenefitsArr.length > 0
             ? hotBenefitsArr.map((item) => (
-                <>
-                  <li
-                    // onClick={() => {
-                    //   navigate(`/vendor/${item.id}`, {
-                    //     state: { id: item.id },
-                    //   });
-                    // }}
-                    className="hotBenefit isLink"
-                  >
-                    <div className="hotBenefitImg">
-                      <img
-                        src={item.image}
-                        alt="My Awesome"
-                      />
-                      <div className="hotBenefitCategory">{item.category}</div>
+              <>
+                <li
+                  // onClick={() => {
+                  //   navigate(`/vendor/${item.id}`, {
+                  //     state: { id: item.id },
+                  //   });
+                  // }}
+                  className="hotBenefit isLink"
+                >
+                  <div className="hotBenefitImg">
+                    <img
+                      src={item.image}
+                      alt="My Awesome"
+                    />
+                    <div className="hotBenefitCategory">{item.category}</div>
+                  </div>
+                  <div className="hotBenefitContent">
+                    <div className="old">
+                      <h6 className="hotBenefitNew">{item.title}</h6>
+                      <h6 className="hotBenefitOld price">{item.price} ₪</h6>
                     </div>
-                    <div className="hotBenefitContent">
-                      <h6 className="hotBenefitTitle">{item.title}</h6>
-                      <h6 className="hotBenefitPrice">{item.price} ₪</h6>
+                    <div className="new">
+                      <h5 className="hotBenefitNew">₪{item.new} + {item.coins}<TollIcon /></h5>
                     </div>
-                  </li>
-                </>
-              ))
-            : t("No merchants")}
-        </ul>
-      </ScrollingCarousel>
+                  </div>
+                </li>
+              </>
+            ))
+            : t("No merchants")
+          }
+        </ul >
+      </ScrollingCarousel >
     </>
   );
 }

@@ -16,7 +16,7 @@ const NewHeader = () => {
                 <div className='burger'>
                     <MenuIcon
                         fontSize="large"
-                        sx={{ color: 'white' }}
+                        sx={{ color: 'var(--secondary)' }}
                     />
                 </div>
 
@@ -24,7 +24,7 @@ const NewHeader = () => {
                 <div className='burger'>
                     <SearchOutlinedIcon
                         fontSize="large"
-                        sx={{ color: 'white' }}
+                        sx={{ color: 'var(--secondary)' }}
                     />
                 </div>
 
@@ -34,21 +34,20 @@ const NewHeader = () => {
                     <div className="balanceH">מטבעות שוק</div>
                     <div className="balanceAmount">
                         1200
-                        <TollIcon sx={{ color: 'var(--secondary' }}
+                        <TollIcon sx={{ color: 'var(--primary)' }}
                         />
                     </div>
                 </div>
 
 
                 <div className='collect'>
-                    <span>צבירת</span>
+                    <InfoIcon />
+                    <span>איך לצבור</span>
                     <TollIcon
                         fontSize="small"
                         sx={{ color: 'var(--primary)' }}
                     />
-                    <div>
-                        <InfoIcon />
-                    </div>
+
                     {/* <KeyboardArrowLeftIcon */}
                     {/* sx={{ color: 'var(--primary)' }} */}
                     {/* /> */}

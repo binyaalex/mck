@@ -412,9 +412,10 @@ div[data-arrow="right"] {
   background-color: #fff;
   margin-top: 10px;
   font-weight: 600;
-  font-size: 8px;
-  line-height: 10px;
+  font-size: 10px;
+  line-height: 12px;
   letter-spacing: 0.04em;
+  color: var(--primary);
 }
 
 .casebackBox-offer span {
@@ -549,7 +550,7 @@ div[data-arrow="right"] {
 
 .otherCategory {
   text-align: center;
-  width: 20%
+  width: 30%
 }
 
 .otherCategory svg {
@@ -579,7 +580,7 @@ div[data-arrow="right"] {
   position: absolute;
   top: 8px;
   right: 5px;
-  background: white;
+  background: var(--secondary);
   border-radius: 66px;
   width: 45%;
   font-weight: 400;
@@ -587,24 +588,51 @@ div[data-arrow="right"] {
   line-height: 10px;
   text-align: center;
   padding: 4px;
-  color: var(--secondary)
+  color: var(--primary)
 }
 
 .hotBenefitContent {
+  /* display: flex; */
   text-align: right;
-  padding: 0 10px 10px;
 }
 
-.hotBenefitTitle {
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 14px;
+.hotBenefitContent .old {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5%;
+
+}
+
+.hotBenefitContent .old .price {
+
+  text-decoration: line-through;
+
+}
+
+.hotBenefitContent .new {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5%;
+
+}
+
+.hotBenefitOld {
+  /* font-weight: 400; */
+  font-size: 12px;
+  /* line-height: 14px; */
   color: #343A40;
   margin: 0;
 }
 
+.hotBenefitNew {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .hotBenefitPrice {
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 12px;
   line-height: 16px;
   /* identical to box height */
