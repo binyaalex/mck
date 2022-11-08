@@ -229,3 +229,11 @@
   width: 36px;
   height: 36px;
 }
+
+.grayIconTitle {
+  color: var(--primary);
+}
+
+.grayIconLink {
+  text-align: center;
+}

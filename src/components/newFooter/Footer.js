@@ -9,7 +9,7 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 // import { HiOutlineBuildingStorefront } from "react-icons/hi";
 import DinnerDiningOutlinedIcon from '@mui/icons-material/DinnerDiningOutlined';
 import { FiHome } from "react-icons/fi";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineTags } from "react-icons/ai";
 // import { IoRestaurantOutline } from "react-icons/io";
 import { AiOutlineGift } from "react-icons/ai";
 import { BsWallet2 } from "react-icons/bs";
@@ -28,18 +28,22 @@ const containerArr = [
   {
     img: <FiHome />,
     link: "",
+    title: "ראשי",
   },
   {
-    img: <AiOutlineHeart />,
+    img: <AiOutlineTags />,
     link: "",
+    title: "טרם מומשו",
   },
-  {
-    img: <DinnerDiningOutlinedIcon />,
-    link: "",
-  },
+  // {
+  //   img: <DinnerDiningOutlinedIcon />,
+  //   link: "",
+  //   title: "מסעדות",
+  // },
   {
     img: <BsWallet2 />,
     link: "",
+    title: "ארנק",
   },
 ];
 
@@ -80,6 +84,7 @@ const Footer = () => {
                       url={url}
                       key={i}
                       link={el.link}
+                      title={el.title}
                     />
                   );
                 })}

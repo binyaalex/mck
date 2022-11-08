@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const GrayIcon = ({ img, i, url, link }) => {
+const GrayIcon = ({ img, i, url, link, title }) => {
   let className = "grayIconLink";
   // if (url === '/' && i === 2) {
   // 	className = 'grayIconLink grayIconLinkActive'
@@ -13,6 +13,7 @@ const GrayIcon = ({ img, i, url, link }) => {
   return (
     <Link to={link} className={className}>
       {img}
+      <div className="grayIconTitle">{title}</div>
     </Link>
   );
 };
