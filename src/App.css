@@ -1,9 +1,9 @@
 html {
   --gray: #bdc4d1;
   --lightgray: #e1e4ea;
-  --primary: #0f5f2c !important;
-  --secondary: #ffe801 !important;
-  --bg: #3eb64c !important;
+  --primary: #1F513E !important;
+  --secondary: #F6C749 !important;
+  --bg: #008C45 !important;
   /* --lightblue: #17A2B8;
   --blue: #1976d2;
   --blue3: #007bff;
@@ -27,7 +27,8 @@ html {
 }
 
 .Page {
-  max-width: 428px;
+  /* max-width: 428px; */
+  width: 100%;
   /* padding: 0 15px; */
   margin-bottom: 100px;
 }

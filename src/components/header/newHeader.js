@@ -4,7 +4,7 @@ import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 import MicIcon from "@mui/icons-material/Mic";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Button from "@mui/material/Button";
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/images/logo.png"
 import MenuIcon from "@mui/icons-material/Menu";
 import TollIcon from '@mui/icons-material/Toll';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -15,7 +15,7 @@ const NewHeader = () => {
                 <div className='burger'>
                     <MenuIcon
                         fontSize="large"
-                        sx={{ color: 'var(--primary)' }}
+                        sx={{ color: 'white' }}
                     />
                 </div>
 
@@ -24,7 +24,7 @@ const NewHeader = () => {
                     <div className="balanceH">היתרה שלי</div>
                     <div className="balanceAmount">
                         1200
-                        <TollIcon sx={{ color: 'white' }}
+                        <TollIcon sx={{ color: 'var(--secondary' }}
                         />
                     </div>
                 </div>
