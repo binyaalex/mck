@@ -286,6 +286,9 @@ export default function Dashboard() {
           {/*</ScrollingCarousel>*/}
 
           <div className="product-block">
+            <div className="products-title">
+              <h6 className="module-heading__title">כל ההטבות</h6>
+            </div>
             <ul className="product-Module">
               {filterProducts.length > 0
                 ? currentFilterProducts.map((product) => (

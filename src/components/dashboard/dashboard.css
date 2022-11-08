@@ -64,7 +64,7 @@ div[data-arrow="right"] {
 .module-heading__title {
   font-size: 12px;
   line-height: 18px;
-  color: #77838f;
+  color: var(--primary);
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -628,4 +628,9 @@ div[data-arrow="right"] {
 
 .product-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.products-title {
+  width: 100%;
+  margin-bottom: 10px;
 }
