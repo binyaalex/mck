@@ -59,8 +59,11 @@ export default function Dashboard() {
     indexOfLastProduct
   );
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
+  const paginate = (e) => {
+    setCurrentPage(e.target.textContent);
+    console.log(e.target.textContent);
+  }
+  
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { t } = useTranslation();

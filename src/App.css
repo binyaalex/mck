@@ -28,7 +28,7 @@ html {
 .Page {
   max-width: 428px;
   padding: 0 15px;
-  margin: 100px;
+  margin-bottom: 100px;
 }
 
 a:hover {
