@@ -483,6 +483,15 @@ div[data-arrow="right"] {
   margin-bottom: 100px;
 }
 
+/*------------------------------ pagination color --------------*/
+.css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--primary) !important;
+}
+
+.css-1hxrwmy-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--primary) !important;
+}
+
 [dir="rtl"] .product-box__price {
   direction: ltr;
   text-align: left;
