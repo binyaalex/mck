@@ -640,6 +640,11 @@ div[data-arrow="right"] {
   margin: 0 0 2px;
 }
 
+.hotLocation {
+  display: flex;
+  padding-right: 5%;
+}
+
 /* ----------------product------------------- */
 
 .product-box__Loc {

@@ -6,7 +6,7 @@ import { ScrollingCarousel } from "@trendyol-js/react-carousel";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TollIcon from '@mui/icons-material/Toll';
-
+import { MdLocationOn } from "react-icons/md";
 import { getMerchants } from "../../redux/actions-exporter";
 
 import hotBenefit1 from '../../assets/images/hotBenefit1.png'
@@ -23,6 +23,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
     {
@@ -31,6 +32,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
     {
@@ -39,6 +41,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
     {
@@ -47,6 +50,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
     {
@@ -55,6 +59,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
     {
@@ -63,6 +68,7 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
       coins: 20,
+      city: "ירושלים",
       new: 50
     },
   ]
@@ -166,6 +172,18 @@ export default function HotBenefitList(props) {
                       <h6 className="hotBenefitNew">{item.title}</h6>
                       <h6 className="hotBenefitOld price">{item.price} ₪</h6>
                     </div>
+                    <div className="hotLocation">
+                      <MdLocationOn />
+                      <h6 className="hotBenefitOld">
+                        {item.city}
+                      </h6>
+                    </div>
+
+                    {/* <div className="hotLocation">
+                      <LocationOnIcon />
+                      <h6 className="hotLocation">{item.city}</h6>
+                    </div> */}
+
                     <div className="new">
                       <h5 className="hotBenefitNew">₪{item.new} + {item.coins}<TollIcon /></h5>
                     </div>
