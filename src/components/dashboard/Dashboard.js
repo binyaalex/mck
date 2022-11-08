@@ -173,6 +173,9 @@ export default function Dashboard() {
         <div className="container">
           <div className="block-slider">
             <div className="module-heading">
+  
+              <CouponsList />
+
               <OtherCategories slider={false} categories={otherCategoriesArr} />
 
               {/* <div className="featured-product">
@@ -210,7 +213,6 @@ export default function Dashboard() {
                 </div>
               </div> */}
 
-              <CouponsList />
 
               {/* <div className="row align-items-center">
                 <div className="col-7">
