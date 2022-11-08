@@ -1,8 +1,8 @@
 html {
   --gray: #bdc4d1;
   --lightgray: #e1e4ea;
-  --primary: #00386C !important;
-  --secondary: #00D7B6 !important;
+  --primary: #0f5f2c !important;
+  --secondary: #ffe801 !important;
   /* --lightblue: #17A2B8;
   --blue: #1976d2;
   --blue3: #007bff;
@@ -27,7 +27,7 @@ html {
 
 .Page {
   max-width: 428px;
-  padding: 0 15px;
+  /* padding: 0 15px; */
   margin-bottom: 100px;
 }
 
@@ -288,11 +288,7 @@ iframe {
   margin-right: 0px;
 }
 
-[dir="rtl"]
-  .MuiPopover-root
-  .MuiPopover-paper
-  .MuiListItem-gutters.MuiListItem-button
-  img {
+[dir="rtl"] .MuiPopover-root .MuiPopover-paper .MuiListItem-gutters.MuiListItem-button img {
   margin-right: 0;
   margin-left: 8px;
 }
