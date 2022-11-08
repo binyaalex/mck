@@ -35,16 +35,16 @@ import { MdToys } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
 
 const screenWidth = window.innerWidth;
-let makeProductsPerPage = 0;
-if (screenWidth > 991) {
-  makeProductsPerPage = 12;
-} else if (screenWidth > 767) {
-  makeProductsPerPage = 8;
-} else if (screenWidth > 500) {
-  makeProductsPerPage = 6;
-} else {
-  makeProductsPerPage = 10;
-}
+let makeProductsPerPage = 10;
+// if (screenWidth > 991) {
+//   makeProductsPerPage = 12;
+// } else if (screenWidth > 767) {
+//   makeProductsPerPage = 8;
+// } else if (screenWidth > 500) {
+//   makeProductsPerPage = 6;
+// } else {
+//   makeProductsPerPage = 10;
+// }
 
 export default function Dashboard() {
   const [products, setProducts] = useState([]);
@@ -63,7 +63,7 @@ export default function Dashboard() {
     setCurrentPage(e.target.textContent);
     console.log(e.target.textContent);
   }
-  
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { t } = useTranslation();

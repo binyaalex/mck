@@ -44,10 +44,10 @@ a:hover {
 }
 
 iframe {
-  z-index: 0 !important;
+  /* z-index: 0 !important; */
   /* height: 0 !important;
   width: 0 !important; */
-  position: initial !important;
+  /* position: initial !important; */
 }
 
 .App-logo {

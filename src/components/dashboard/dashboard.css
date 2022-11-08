@@ -518,11 +518,11 @@ div[data-arrow="right"] {
   }
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) { */
   .product-Module {
     grid-template-columns: 1fr 1fr;
   }
-}
+/* } */
 
 /* checking */
 

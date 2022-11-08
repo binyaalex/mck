@@ -20,7 +20,7 @@ export default function BasicPagination({ productsPerPage, totalProducts, pagina
         onClick={paginate}
         count={pageNumbers.length} 
         color="primary"
-        size= 'small'
+        size='small'
       />
     </Stack>
   );
