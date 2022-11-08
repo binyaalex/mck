@@ -33,6 +33,8 @@ import { FaUmbrellaBeach } from "react-icons/fa";
 import { RiPriceTagFill } from "react-icons/ri";
 import { MdToys } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
+import { GiTwoCoins } from "react-icons/gi";
+import { MdLocationOn } from "react-icons/md";
 
 const screenWidth = window.innerWidth;
 let makeProductsPerPage = 10;
@@ -322,22 +324,34 @@ export default function Dashboard() {
                           </div>
                           <div className="product-box__info">
                             <div className="product-box__infoTop">
-                              <h6 className="product-box__brand">
-                                {product.title}
-                              </h6>
+                              <div className="product-box__titleAndLoc">
+                                <h6 className="product-box__brand">
+                                  {product.title}
+                                </h6>
+                                <div className="product-box__Loc">
+                                  <MdLocationOn/>
+                                  <h6 className="product-box__brand product-box__LocH">
+                                    הרצליה
+                                  </h6>
+                                </div>
+                              </div>
                               <span className="product-box__price">
-                                {product?.oldPrice && (
+                                {/* {product?.oldPrice && ( */}
                                   <>
-                                    <s>{product.oldPrice}₪</s>&nbsp;
+                                    <s>₪99</s>&nbsp;
+                                    {/* <s>{product.oldPrice}₪</s>&nbsp; */}
                                   </>
-                                )}
-                                {product?.price || 0}₪
+                                {/* )} */}
+                             </span>                              
+                            </div>
+                            <div className="product-box__priceDiv">
+                              <span className="product-box__price">
                                 {product?.credit && (
                                   <>
-                                    {" "}
-                                    + <br></br> {product.credit} e-credits
+                                    <GiTwoCoins/>{" "}{product.credit} +{" "} 
                                   </>
                                 )}
+                                ₪{product?.price || 0}
                               </span>
                             </div>
                             {/*<h5 className="product-box__name">*/}
