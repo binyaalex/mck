@@ -203,7 +203,7 @@
 }
 
 .footer .grayIconLink > svg {
-  color: var(--secondry);
+  color: var(--primary);
   font-size: 27px;
 }
 

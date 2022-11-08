@@ -6,11 +6,14 @@ import HomeIcon from "@mui/icons-material/Home";
 // import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-import { IoIosChatbubbles } from "react-icons/io";
-import { GrHomeRounded } from "react-icons/gr";
-// import { SlWallet } from "react-icons/si";
+// import { HiOutlineBuildingStorefront } from "react-icons/hi";
+import DinnerDiningOutlinedIcon from '@mui/icons-material/DinnerDiningOutlined';
+import { FiHome } from "react-icons/fi";
+import { AiOutlineHeart } from "react-icons/ai";
 // import { IoRestaurantOutline } from "react-icons/io";
 import { AiOutlineGift } from "react-icons/ai";
+import { BsWallet2 } from "react-icons/bs";
+
 
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
@@ -23,19 +26,19 @@ import "./Footer.css";
 
 const containerArr = [
   {
-    img: <GrHomeRounded />,
+    img: <FiHome />,
     link: "",
   },
   {
-    img: <AiOutlineGift />,
+    img: <AiOutlineHeart />,
     link: "",
   },
   {
-    img: <AiOutlineGift />,
+    img: <DinnerDiningOutlinedIcon />,
     link: "",
   },
   {
-    img: <AiOutlineGift />,
+    img: <BsWallet2 />,
     link: "",
   },
 ];
