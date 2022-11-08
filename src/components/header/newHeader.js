@@ -24,42 +24,50 @@ const NewHeader = () => {
                     <div className="balanceH">היתרה שלי</div>
                     <div className="balanceAmount">
                         1200
-                        <TollIcon sx={{ color: 'var(--primary)' }}
+                        <TollIcon sx={{ color: 'white' }}
                         />
                     </div>
                 </div>
             </div>
             <div className="bottom">
+                <div className="right">
 
-                <form className="search-container active-search">
-                    <div className="search-container__btn">
-                        <SearchOutlinedIcon />
-                    </div>
-                    <input
-                        type="text"
-                        id="search-bar"
-                        className="search-container__input"
-                    // onChange={(e) => setSearchText(e.target.value)}
-                    // onClick={openSearch}
-                    // value={searchText}
-                    />
-                    <div className="mic-container__btn">
-                        <MicIcon />
-                    </div>
-                </form>
-                <div className="notificationBlock">
-                    <Button className="dropBtn">
-                        <NotificationsNoneIcon />
-                        <span className="subCount">3</span>
-                    </Button>
-                </div>
-                {/* <div className='coins_container'>
-                    <div className='coins'>
-                        <div className="">איך לצבור מטבעות?</div>
-                        <KeyboardArrowLeftIcon sx={{ color: 'var(--primary)' }}
+                    <form className="search-container active-search">
+                        <div className="search-container__btn">
+                            <SearchOutlinedIcon />
+                        </div>
+                        <input
+                            type="text"
+                            id="search-bar"
+                            className="search-container__input"
+                        // onChange={(e) => setSearchText(e.target.value)}
+                        // onClick={openSearch}
+                        // value={searchText}
                         />
+                        <div className="mic-container__btn">
+                            <MicIcon />
+                        </div>
+                    </form>
+                    <div className="notificationBlock">
+                        <Button className="dropBtn">
+                            <NotificationsNoneIcon />
+                            <span className="subCount">3</span>
+                        </Button>
                     </div>
-                </div> */}
+                </div>
+                {/* <div className='coins_container'> */}
+                <div className='coins'>
+                    איך לצבור
+                    <TollIcon
+                        fontSize="small"
+                        sx={{ color: 'var(--primary)', margin: "1%" }}
+                    />
+
+                    <KeyboardArrowLeftIcon
+                        sx={{ color: 'var(--primary)' }}
+                    />
+                </div>
+                {/* </div> */}
             </div>
         </div>
     )

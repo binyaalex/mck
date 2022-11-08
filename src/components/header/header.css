@@ -87,7 +87,7 @@
 }
 
 .mainheader__filterBtn a:last-child {
-  background-color: var(--primary);
+  background-color: var(--bg);
   margin-left: 8px;
 }
 
@@ -173,7 +173,7 @@
 
 .dropBtn svg {
   font-size: 20px;
-  fill: var(--primary);
+  fill: var(--bg);
 }
 
 /* Search Box Css */
@@ -194,7 +194,7 @@
 .search-container__btn svg {
   height: 20px;
   width: 20px;
-  fill: var(--primary);
+  fill: var(--bg);
 }
 
 .mic-container__btn {
@@ -207,11 +207,11 @@
 .mic-container__btn svg {
   height: 20px;
   width: 20px;
-  fill: var(--primary);
+  fill: var(--bg);
 }
 
 .search-container__input {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--bg);
   height: 40px;
   padding: 10px 10px;
   line-height: 40px;
@@ -317,7 +317,7 @@
 }
 
 .filterBlockRow span.active {
-  border-color: var(--primary);
+  border-color: var(--bg);
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 10%);
 }
 
@@ -548,7 +548,7 @@
 
 .btn-blue {
   background-color: var(--primary);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--bg);
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 16px;
@@ -651,13 +651,13 @@
 }
 
 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--primary) !important;
+  border-color: var(--bg) !important;
 }
 
 .notificationBlock {
   position: relative;
   border-radius: 50%;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--bg);
   margin: 0 10px;
 }
 
@@ -771,7 +771,18 @@
 
 .bottom {
   display: flex;
+  align-items: center;
+}
 
+.right {
+  display: flex;
+  height: auto;
+
+}
+
+.coins {
+  color: var(--primary);
+  width: 35%;
 }
 
 .balance {
@@ -782,8 +793,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 95.84%;
-  color: var(--primary);
-  background-color: var(--secondary);
+  color: white;
+  background-color: var(--bg);
   padding: 1%;
   border-radius: 5px;
   display: flex;
@@ -795,6 +806,6 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 95.84%;
-  color: var(--primary);
+  color: white;
 
 }
