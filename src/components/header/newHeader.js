@@ -8,6 +8,7 @@ import logo from "../../assets/images/logo.png"
 import MenuIcon from "@mui/icons-material/Menu";
 import TollIcon from '@mui/icons-material/Toll';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import InfoIcon from '@mui/icons-material/Info';
 const NewHeader = () => {
     return (
         <div className="header">
@@ -20,19 +21,45 @@ const NewHeader = () => {
                 </div>
 
                 <img src={logo} />
-                <div className="balance">
-                    <div className="balanceH">היתרה שלי</div>
+                <div className='burger'>
+                    <SearchOutlinedIcon
+                        fontSize="large"
+                        sx={{ color: 'white' }}
+                    />
+                </div>
+
+            </div>
+            <div className="bottom">
+                <div className="par">
+                    <div className="balanceH">מטבעות שוק</div>
                     <div className="balanceAmount">
                         1200
                         <TollIcon sx={{ color: 'var(--secondary' }}
                         />
                     </div>
                 </div>
-            </div>
-            <div className="bottom">
-                <div className="right">
 
-                    <form className="search-container active-search">
+
+                <div className='collect'>
+                    <span>צבירת</span>
+                    <TollIcon
+                        fontSize="small"
+                        sx={{ color: 'var(--primary)' }}
+                    />
+                    <div>
+                        <InfoIcon />
+                    </div>
+                    {/* <KeyboardArrowLeftIcon */}
+                    {/* sx={{ color: 'var(--primary)' }} */}
+                    {/* /> */}
+                </div>
+                <div className="notificationBlock">
+                    <Button className="dropBtn">
+                        <NotificationsNoneIcon />
+                        <span className="subCount">3</span>
+                    </Button>
+                </div>
+                {/* <form className="search-container active-search">
                         <div className="search-container__btn">
                             <SearchOutlinedIcon />
                         </div>
@@ -47,26 +74,8 @@ const NewHeader = () => {
                         <div className="mic-container__btn">
                             <MicIcon />
                         </div>
-                    </form>
-                    <div className="notificationBlock">
-                        <Button className="dropBtn">
-                            <NotificationsNoneIcon />
-                            <span className="subCount">3</span>
-                        </Button>
-                    </div>
-                </div>
-                {/* <div className='coins_container'> */}
-                <div className='coins'>
-                    איך לצבור
-                    <TollIcon
-                        fontSize="small"
-                        sx={{ color: 'var(--primary)', margin: "1%" }}
-                    />
+                    </form> */}
 
-                    <KeyboardArrowLeftIcon
-                        sx={{ color: 'var(--primary)' }}
-                    />
-                </div>
                 {/* </div> */}
             </div>
         </div>

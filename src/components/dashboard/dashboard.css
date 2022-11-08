@@ -83,7 +83,7 @@ div[data-arrow="right"] {
 
 /* --- Block Slider --- */
 .block-slider {
-  margin: 25px 0;
+  /* margin: 20px 0; */
 }
 
 .categoryList {
@@ -375,7 +375,7 @@ div[data-arrow="right"] {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
   gap: 15px;
-  margin: 20px 0 35px;
+  margin-bottom: 20px;
 }
 
 .caseback-center .styles-module_slider__o0fqa {
@@ -549,14 +549,17 @@ div[data-arrow="right"] {
 
 .otherCategory {
   text-align: center;
+  width: 20%
 }
 
 .otherCategory svg {
   font-size: 25px;
+  color: var(--primary);
 }
 
 .otherCategoryTitle {
-  font-size: 15px;
+  font-size: 12px;
+  color: var(--primary);
 }
 
 .hotBenefit {
