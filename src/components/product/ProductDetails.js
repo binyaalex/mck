@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Header from "../header/Header";
+import NewHeader from "../header/newHeader";
 import { addToCart } from "../../redux/API/cart/cart.action";
 import { getProductById } from "../../redux/API/product/product.action";
 import QuantitySelector from "../quantitySelector";
@@ -45,7 +45,7 @@ export default function ProductDetails() {
 
   return (
     <div>
-      <Header />
+      <NewHeader />
       <div className="productDetails">
         <div className="container">
           <div className="row">
@@ -131,7 +131,7 @@ export default function ProductDetails() {
             <div className="col-lg-5 offset-lg-1">
               <div className="productDetails-img">
                 {product?.discount && (
-                  <div className="product-box__discount">
+                  <div className="product-box__discount single">
                     <span className="product-box__off">
                       {product.discountType ? "" : "-"}
                       {product.discount}
@@ -142,8 +142,8 @@ export default function ProductDetails() {
                 <img
                   src={product?.image}
                   alt=""
-                  height={50}
-                  width={50}
+                  // height={50}
+                  // width={50}
                   className="img-fluid"
                 />
               </div>
