@@ -48,7 +48,8 @@
   "lang": "שפה",
   "paymentForPurchase": "תשלום עבור רכישה",
   "paymentHistory": "היסטוריית תשלומים",
-  "loadMoney": "טען כסף",
+  "loadMoney": "טעינת כסף",
+  "pay at mck": "תשלום במחסני השוק",
   "creditCardOorder": "הזמנת כרטיס אשראי",
   "moneyBalances": "יתרות כסף",
   "moneyTransfer": "העברת כסף",
@@ -380,9 +381,11 @@
   "Load E-Credit": "טען E-Credit",
   "Load E-Credit To Wallet": "טעינת E-Credit לארנק",
   "Sign In": "כניסה",
+  "vendors list": "רשימת רשתות",
   "Just sign in if you have an acoount in here. Enjoy our Website": "פשוט היכנס אם יש ברשותך חשבון כאן. תהנה מהאתר",
   "Forgot password": "שכחתי ססמה",
   "Reset Password": "אפס ססמה",
+  "pay at the buisness": "תשלום בבית בעסק",
   "Already have an account? ": "כבר יש לך חשבון? ",
   "Sign In now!": "היכנס עכשיו!"
 }

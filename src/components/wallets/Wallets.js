@@ -5,6 +5,8 @@ import PaymentIcon from "@mui/icons-material/Payment";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 import StoreIcon from "@mui/icons-material/Store";
+import { FaShoppingCart } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
@@ -67,22 +69,20 @@ export default function Wallets() {
             <div
               className="walletIconsBox isLink"
               onClick={() => {
-                navigate("/payment");
-              }}
-            >
-              <PaymentIcon />
-              <h6 className="walletIconsBox-title">
-                {t("paymentForPurchase")}
-              </h6>
-            </div>
-            <div
-              className="walletIconsBox isLink"
-              onClick={() => {
                 navigate("/loadmoney");
               }}
             >
               <LocalAtmIcon />
               <h6 className="walletIconsBox-title">{t("loadMoney")}</h6>
+            </div>
+            <div
+              className="walletIconsBox isLink"
+              // onClick={() => {
+              //   navigate("/loadmoney");
+              // }}
+            >
+              <FaShoppingCart />
+              <h6 className="walletIconsBox-title">{t("pay at mck")}</h6>
             </div>
             {/* <div
               className="walletIconsBox isLink"
@@ -109,7 +109,18 @@ export default function Wallets() {
               }}
             >
               <StoreIcon />
-              <h6 className="walletIconsBox-title">{t("shop")}</h6>
+              <h6 className="walletIconsBox-title">{t("vendors list")}</h6>
+            </div>
+            <div
+              className="walletIconsBox isLink"
+              onClick={() => {
+                navigate("/payment");
+              }}
+            >
+              <PaymentIcon />
+              <h6 className="walletIconsBox-title">
+                {t("pay at the buisness")}
+              </h6>
             </div>
           </div>
 
@@ -124,7 +135,7 @@ export default function Wallets() {
             </Button>
           </div>
 
-          <div className="moneyBlock">
+          {/* <div className="moneyBlock">
             <div className="moneyBlock-heading">
               <h2 className="moneyBlock-title">{t("moneyBalances")}</h2>
               <h3 className="moneyBlock-price">
@@ -137,7 +148,7 @@ export default function Wallets() {
                 {t("moneyTransfer")}
               </Button>
             </div>
-          </div>
+          </div> */}
 
           <div>
             {show ? (
