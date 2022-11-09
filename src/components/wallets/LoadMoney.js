@@ -29,7 +29,7 @@ export default function LoadMoney({ credit = false }) {
 
   return (
     <div>
-      <Header />
+      <Header isFull={true} />
       <div className="loadMoneyTemplate">
         <div className="container">
           <div className="templateHeading">
@@ -51,7 +51,7 @@ export default function LoadMoney({ credit = false }) {
                 type="number"
                 step="1"
                 min="0.00"
-                defaultValue="0.00"
+                defaultValue="0"
                 onChange={onChange}
               />
             </div>
@@ -59,7 +59,7 @@ export default function LoadMoney({ credit = false }) {
             <h2 className="loadMoneyCard-text">
               {t("newBalanceAfterTransfers")}
             </h2>
-            <h1 className="loadMoneyCard-price">{money?.toFixed(1) || 0}</h1>
+            <h1 className="loadMoneyCard-price">{money?.toFixed(0) || 0}</h1>
             <div className="loadMoneyCard-btn">
               <Button
                 className="blueBtn"
