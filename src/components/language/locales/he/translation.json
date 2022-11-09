@@ -49,6 +49,9 @@
   "paymentForPurchase": "תשלום עבור רכישה",
   "paymentHistory": "היסטוריית תשלומים",
   "loadMoney": "טעינת כסף",
+  "pay": "שלם",
+  "payment at the business": "תשלום בבית עסק",
+  "payment amount after benefit of 35%": "סכום לתשלום לאחר הטבה של 35%",
   "pay at mck": "תשלום במחסני השוק",
   "creditCardOorder": "הזמנת כרטיס אשראי",
   "moneyBalances": "יתרות כסף",
@@ -385,7 +388,7 @@
   "Just sign in if you have an acoount in here. Enjoy our Website": "פשוט היכנס אם יש ברשותך חשבון כאן. תהנה מהאתר",
   "Forgot password": "שכחתי ססמה",
   "Reset Password": "אפס ססמה",
-  "pay at the buisness": "תשלום בבית בעסק",
+  "pay at the buisness": "תשלום בבית עסק",
   "Already have an account? ": "כבר יש לך חשבון? ",
   "Sign In now!": "היכנס עכשיו!"
 }

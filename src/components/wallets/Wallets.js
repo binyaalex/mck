@@ -113,7 +113,7 @@ export default function Wallets() {
             <div
               className="walletIconsBox isLink"
               onClick={() => {
-                navigate("/payment");
+                navigate("/BusinessPayment");
               }}
             >
               <PaymentIcon />

@@ -11,7 +11,7 @@ import { addMoney } from "../../redux/API/user/user.action";
 
 import "../wallets/loadmoney.css";
 
-export default function LoadMoney({ credit = false }) {
+export default function BusinessPayment({ credit = false }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export default function LoadMoney({ credit = false }) {
   const onChange = (e) => {
     const value = parseFloat(e.currentTarget.value) || 0;
     if (value >= 0) {
-      setNewMoney(value);
+      setNewMoney(value*0.65);
       setMoney((user[credit ? "credit" : "money"] || 0) + value);
     }
   };
@@ -42,7 +42,7 @@ export default function LoadMoney({ credit = false }) {
               <ArrowBackIcon />
             </span>
             <h1 className="templateTitle">
-              {t(credit ? "Load E-Credit To Wallet" : "loadMoneyToWallet")}
+              {t("payment at the business")}
             </h1>
           </div>
           <div className="loadMoneyCard">
@@ -57,18 +57,18 @@ export default function LoadMoney({ credit = false }) {
             </div>
             <ArrowDownwardIcon />
             <h2 className="loadMoneyCard-text">
-              {t("newBalanceAfterTransfers")}
+              {t("payment amount after benefit of 35%")}
             </h2>
-            <h1 className="loadMoneyCard-price">{money?.toFixed(0) || 0}</h1>
+            <h1 className="loadMoneyCard-price">{newMoney?.toFixed(2) || 0}</h1>
             <div className="loadMoneyCard-btn">
               <Button
                 className="blueBtn"
                 onClick={() => {
-                  dispatch(addMoney(newMoney, credit));
-                  navigate("/checkout");
+                  // dispatch(addMoney(newMoney, credit));
+                  navigate("/");
                 }}
               >
-                {t(credit ? "Load E-Credit" : "loadMoney")}
+                {t("pay")}
               </Button>
             </div>
           </div>
