@@ -5,6 +5,7 @@ import { Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { GiTwoCoins } from "react-icons/gi";
 
 import NewHeader from "../header/newHeader";
 import { addToCart } from "../../redux/API/cart/cart.action";
@@ -42,7 +43,7 @@ export default function ProductDetails() {
       });
     }
   }, [product]); //eslint-disable-line
-
+  product && console.log(product);
   return (
     <div>
       <NewHeader />
@@ -56,11 +57,11 @@ export default function ProductDetails() {
                   <h6 className="productDetails-price">
                     {product?.oldPrice && (
                       <>
-                        <s>{product.oldPrice}₪</s>&nbsp;
+                        <s>₪{product.oldPrice}</s>&nbsp;
                       </>
                     )}
-                    <span>{product?.price || 0}₪</span>
-                    {product?.credit && <> + {product.credit} e-credits</>}
+                    <span>₪{product?.price || 0}</span>
+                    {product?.credit && <> + {product.credit} <GiTwoCoins /></>}
                   </h6>
                 </div>
                 <div
@@ -86,14 +87,7 @@ export default function ProductDetails() {
                     {product?.merchant?.title || t("No merchant")}
                   </p>
                 </div>
-                <div className="productDetails-content">
-                  <h6 className="productDetails-contentTitle">
-                    {t("description")}
-                  </h6>
-                  <p className="productDetails-contentText">
-                    {product?.description || ""}
-                  </p>
-                </div>
+
                 <QuantitySelector
                   onChange={handleChangeQuantity}
                   minValue="1"
@@ -104,10 +98,19 @@ export default function ProductDetails() {
                     className="addcart_btn"
                     onClick={() => handleAddProduct(product)}
                   >
-                    {t("addToCart")}
+                    <span>{t("addToCart")}</span>
                   </Button>
                   {/*<Button className="buynow_btn">{t("BuyNow")}</Button>*/}
                 </div>
+                <div className="productDetails-content">
+                  <h6 className="productDetails-contentTitle">
+                    {t("description")}
+                  </h6>
+                  <p className="productDetails-contentText">
+                    {product?.content || ""}
+                  </p>
+                </div>
+
                 <ul className="productDetails-List">
                   {product?.sku && (
                     <li className="productDetails-ListItem">
@@ -128,26 +131,26 @@ export default function ProductDetails() {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-5 offset-lg-1">
-              <div className="productDetails-img">
-                {product?.discount && (
-                  <div className="product-box__discount single">
-                    <span className="product-box__off">
-                      {product.discountType ? "" : "-"}
-                      {product.discount}
-                      {product.discountType}
-                    </span>
-                  </div>
-                )}
-                <img
-                  src={product?.image}
-                  alt=""
-                  // height={50}
-                  // width={50}
-                  className="img-fluid"
-                />
-              </div>
+            {/* <div className="col-lg-5 offset-lg-1"> */}
+            <div className="productDetails-img">
+              {product?.discount && (
+                <div className="product-box__discount single">
+                  <span className="product-box__off">
+                    {product.discountType ? "" : "-"}
+                    {product.discount}
+                    {product.discountType}
+                  </span>
+                </div>
+              )}
+              <img
+                src={product?.image}
+                alt=""
+                // height={50}
+                // width={50}
+                className="img-fluid"
+              />
             </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
