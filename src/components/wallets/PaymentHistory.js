@@ -2,6 +2,7 @@ import React from "react";
 //component
 import Header from "../header/Header";
 //images
+import hotBenefit1 from '../../assets/images/hotBenefit1.png'
 import Mastercard from "../../assets/images/mastercard.png";
 import Visa from "../../assets/images/visa.jpg";
 import Footlocker from "../../assets/images/footlocker.png";
@@ -19,35 +20,67 @@ function PaymentHistory() {
 
   const history = [
     {
-      image: Mastercard,
-      name: t("purchases"),
+      image: hotBenefit1,
+      name: 'עידן אלתרמן',
       detail: "11.12.2021 16:05",
-      price: "-495",
+      price: "50",
       type: "card",
       cardno: "**** *****",
     },
     {
-      image: Footlocker,
-      name: t("cardre"),
+      image: hotBenefit1,
+      name: 'עידן אלתרמן',
       detail: "11.12.2021 16:05",
-      price: "+105",
-      type: "all",
-    },
-    {
-      image: Visa,
-      name: t("purchases"),
-      detail: "11.12.2021 16:05",
-      price: "-729",
+      price: "50",
       type: "card",
       cardno: "**** *****",
     },
     {
-      image: FoxHome,
-      name: t("cardre"),
+      image: hotBenefit1,
+      name: 'עידן אלתרמן',
       detail: "11.12.2021 16:05",
-      price: "+800",
-      type: "all",
+      price: "50",
+      type: "card",
+      cardno: "**** *****",
     },
+    {
+      image: hotBenefit1,
+      name: 'עידן אלתרמן',
+      detail: "11.12.2021 16:05",
+      price: "50",
+      type: "card",
+      cardno: "**** *****",
+    },
+    // {
+    //   image: Mastercard,
+    //   name: t("purchases"),
+    //   detail: "11.12.2021 16:05",
+    //   price: "495",
+    //   type: "card",
+    //   cardno: "**** *****",
+    // },
+    // {
+    //   image: Footlocker,
+    //   name: t("cardre"),
+    //   detail: "11.12.2021 16:05",
+    //   price: "105",
+    //   type: "all",
+    // },
+    // {
+    //   image: Visa,
+    //   name: t("purchases"),
+    //   detail: "11.12.2021 16:05",
+    //   price: "729",
+    //   type: "card",
+    //   cardno: "**** *****",
+    // },
+    // {
+    //   image: FoxHome,
+    //   name: t("cardre"),
+    //   detail: "11.12.2021 16:05",
+    //   price: "800",
+    //   type: "all",
+    // },
   ];
 
   return (
