@@ -10,7 +10,6 @@ const GrayIcon = ({ img, i, url, link, title }) => {
   } else if (url === '/wallet' && i === 2) {
     cn = 'grayIconLink chosen'
   }
-  console.log(cn);
 
   return (
     <Link to={link} className={cn}>

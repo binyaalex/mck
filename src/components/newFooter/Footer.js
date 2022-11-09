@@ -23,6 +23,7 @@ import GrayIcon from "./GrayIcon";
 
 import "./Footer.css";
 import { useEffect, useState } from "react";
+import {  useLocation } from 'react-router-dom'
 
 const containerArr = [
   {
@@ -48,11 +49,14 @@ const containerArr = [
 ];
 
 const Footer = () => {
-  // const [url, setUrl] = useState();
-  let url = window.location.pathname;
-  // useEffect(() => {
-  //   setUrl(getUrl)
-  // }, []);
+  const location =  useLocation()
+  const [url, setUrl] = useState();
+
+  useEffect(() => {
+      console.log(`You changed the page to: ${location.pathname}`)
+      setUrl(location.pathname)
+  }, [location]);
+  
   return (
     <>
       {/* <BrowserView>
@@ -78,7 +82,7 @@ const Footer = () => {
       <div>
         <footer className="footer">
           <div className="sosAndGray">
-            <div className="grayIcons">
+            <div className="grayIcons" >
               {containerArr.map((el, i) => {
                 return (
                   <GrayIcon
