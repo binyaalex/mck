@@ -173,7 +173,7 @@ const OldHeader = () => {
     { code: "#c6c6c6", value: "" },
   ];
 
-  const handleSizeChange = (item, i) => {};
+  const handleSizeChange = (item, i) => { };
 
   const handleLogout = () => {
     dispatch(logout(() => navigate("/")));
@@ -227,7 +227,7 @@ const OldHeader = () => {
                               </div>
                               <div
                                 className="menuHead-btn"
-                                // onClick={() => history.push("/")}
+                              // onClick={() => history.push("/")}
                               ></div>
                             </div>
                           )}

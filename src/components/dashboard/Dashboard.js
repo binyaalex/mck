@@ -5,10 +5,14 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import MicIcon from "@mui/icons-material/Mic";
+import SearchResult from "../searchResult/SearchResult";
 
 // import ChatBot from "../chat/ChatBot";
 import Header from "../header/Header";
 import OnlyCategoryList from "../category/OnlyCategoryList";
+import Drawer from "@mui/material/Drawer";
+import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
 
 import {
   getMerchants,
@@ -48,9 +52,12 @@ let makeProductsPerPage = 10;
 // }
 
 export default function Dashboard() {
+  const [stores, setStores] = useState([]);
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
-
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchText, setSearchText] = useState([]);
+  const [filterStores, setFilterStores] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(makeProductsPerPage);
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -59,6 +66,7 @@ export default function Dashboard() {
     indexOfFirstProduct,
     indexOfLastProduct
   );
+  const merchants = useSelector((state) => state.merchant.merchants);
 
   const paginate = (e) => {
     setCurrentPage(e.target.textContent);
@@ -124,6 +132,49 @@ export default function Dashboard() {
     }
   };
 
+  const openSearch = () => {
+    document.querySelector(".menuSearch").style.display = "none"
+      ? "block"
+      : "none";
+  };
+  const openDrawer = () => {
+    console.log('hi');
+    setIsSearchOpen(true)
+  }
+  useEffect(() => {
+    if (categories.length) {
+      const prepareProduct = categories.reduce(
+        (previous, current) => [
+          ...previous,
+          ...current.products.map((product) => ({
+            ...product,
+            categoryId: current.id,
+            categoryName: current.title,
+          })),
+        ],
+        []
+      );
+      setProducts(prepareProduct);
+      setStores(merchants);
+    }
+  }, [categories]); // eslint-disable-line
+
+  useEffect(() => {
+    const filteredP = products.filter((product) =>
+      product.title.includes(searchText)
+    );
+    filteredP === products
+      ? setFilterProducts([])
+      : setFilterProducts(filteredP);
+
+    const filteredS = stores.filter((store) =>
+      store.title.includes(searchText)
+    );
+
+    filteredS === stores ? setFilterStores([]) : setFilterStores(filteredS);
+    // console.log(filterStores);
+  }, [searchText]); // eslint-disable-line
+
   const otherCategoriesArr = [
     {
       title: t("performances"),
@@ -167,7 +218,36 @@ export default function Dashboard() {
     <>
       <div className="dashboard-tamplate">
         {/* <Header /> */}
-        <Header isFull={true} />
+        <Header isFull={true} openDrawer={openDrawer} />
+        <Drawer
+          PaperProps={{
+            sx: { width: "75%", marginTop: "72px" },
+          }}
+          open={isSearchOpen}
+          onClose={() => setIsSearchOpen(false)}
+        >
+          <form className="search-container active-search">
+            <div className="search-container__btn">
+              <SearchOutlinedIcon />
+            </div>
+            <input
+              type="text"
+              id="search-bar"
+              placeholder="חיפוש"
+              className="search-container__input"
+              onChange={(e) => setSearchText(e.target.value)}
+              onClick={openSearch}
+              value={searchText}
+            />
+            <div className="mic-container__btn">
+              <MicIcon />
+            </div>
+          </form>
+          <SearchResult
+            filterProducts={filterProducts}
+            filterStores={filterStores}
+          />
+        </Drawer>
 
         <div className="container">
           <div className="block-slider">

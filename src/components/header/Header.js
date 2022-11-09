@@ -1,7 +1,7 @@
 import './header.css'
+import React, { useState, useEffect } from "react";
 
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
-import MicIcon from "@mui/icons-material/Mic";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Button from "@mui/material/Button";
 import logo from "../../assets/images/logo.png"
@@ -10,7 +10,8 @@ import { GiTwoCoins } from "react-icons/gi";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import InfoIcon from '@mui/icons-material/Info';
 
-const Header = ({ isFull }) => {
+const Header = ({ isFull, openDrawer }) => {
+
     return (
         <div className="header">
             <div className="top">
@@ -26,41 +27,48 @@ const Header = ({ isFull }) => {
                     <SearchOutlinedIcon
                         fontSize="large"
                         sx={{ color: 'var(--secondary)' }}
+                        onClick={openDrawer}
+
+                    // if (isSearchOpen) setIsSearchOpen(false);
+                    // else setIsSearchOpen(true);
+                    // }}
                     />
                 </div>
-
             </div>
-            {isFull ?
-                <div className="bottom">
-                    <div className="par">
-                        <div className="balanceH">מטבע שוק</div>
-                        <div className="balanceAmount">
-                            1200
-                            <GiTwoCoins sx={{ color: 'var(--primary)' }}
-                            />
+
+
+            {
+                isFull ?
+                    <div className="bottom">
+                        <div className="par">
+                            <div className="balanceH">מטבע שוק</div>
+                            <div className="balanceAmount">
+                                1200
+                                <GiTwoCoins sx={{ color: 'var(--primary)' }}
+                                />
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div className='collect'>
-                        <InfoIcon />
-                        <span>איך לצבור</span>
-                        <GiTwoCoins
-                            fontSize="large"
-                            sx={{ color: 'var(--primary)' }}
-                        />
+                        <div className='collect'>
+                            <InfoIcon />
+                            <span>איך לצבור</span>
+                            <GiTwoCoins
+                                fontSize="large"
+                                sx={{ color: 'var(--primary)' }}
+                            />
 
-                        {/* <KeyboardArrowLeftIcon */}
-                        {/* sx={{ color: 'var(--primary)' }} */}
-                        {/* /> */}
-                    </div>
-                    <div className="notificationBlock">
-                        <Button className="dropBtn">
-                            <NotificationsNoneIcon />
-                            <span className="subCount">3</span>
-                        </Button>
-                    </div>
-                    {/* <form className="search-container active-search">
+                            {/* <KeyboardArrowLeftIcon */}
+                            {/* sx={{ color: 'var(--primary)' }} */}
+                            {/* /> */}
+                        </div>
+                        <div className="notificationBlock">
+                            <Button className="dropBtn">
+                                <NotificationsNoneIcon />
+                                <span className="subCount">3</span>
+                            </Button>
+                        </div>
+                        {/* <form className="search-container active-search">
                         <div className="search-container__btn">
                             <SearchOutlinedIcon />
                         </div>
@@ -77,10 +85,11 @@ const Header = ({ isFull }) => {
                         </div>
                     </form> */}
 
-                    {/* </div> */}
-                </div>
-                : null}
-        </div>
+                        {/* </div> */}
+                    </div>
+                    : null
+            }
+        </div >
     )
 }
 

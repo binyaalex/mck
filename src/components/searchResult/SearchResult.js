@@ -17,7 +17,7 @@ const SearchReults = ({ filterProducts, filterStores }) => {
     <div className="menuSearch">
       <div className="menuSearchSection">
         <div className="menuSearchSectionLink">
-          מוצרים
+          הטבות
         </div>
         <div className="MenuSearchItemsDiv">
           {filterProducts.map((el, i) => {
@@ -41,7 +41,7 @@ const SearchReults = ({ filterProducts, filterStores }) => {
 
       <div className="menuSearchSection">
         <div to={"#"} className="menuSearchSectionLink">
-          חנויות
+          רשתות
           {/* {header} */}
         </div>
         <div className="MenuSearchItemsDiv">

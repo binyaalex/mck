@@ -1,5 +1,5 @@
 .menuSearch {
-  position: absolute;
+  /* position: absolute;
   top: 65px;
   width: 50%;
   min-width: 320px;
@@ -8,10 +8,10 @@
   left: 50%;
   transform: translate(-50%, 0);
   background-color: white;
-  overflow-y: scroll;
-  text-align: right;
   display: none;
-  z-index: 10;
+  z-index: 10; */
+  text-align: right;
+  overflow-y: scroll;
 }
 
 .menuSearchSection {
@@ -27,7 +27,7 @@
   font-weight: 400;
   font-size: 25px;
   line-height: 45px;
-  padding: 0 70px;
+  padding: 0 25px;
   /* cursor: pointer; */
 }
 
