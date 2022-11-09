@@ -23,6 +23,7 @@ import PaymentHistory from "./components/wallets/PaymentHistory";
 import Menu from "./components/menu/Menu";
 import Checkout from "./components/cart/Checkout";
 import PaymentCardHistory from "./components/wallets/PaymentCardHistory";
+import BusinessPayment from "./components/wallets/BusinessPayment";
 import Company from "./components/booking/Company";
 import Product from "./components/booking/Product";
 import BookingCart from "./components/booking/BookingCart";
@@ -109,6 +110,7 @@ function App(props) {
           <Route path="/documents" element={<Documents />} />
           <Route path="/chatting" element={<Chatting />} />
           <Route path="/payments" element={<Payments />} />
+          <Route path="/BusinessPayment" element={<BusinessPayment />} />
         </Routes>
         <Footer />
       </BrowserRouter>
