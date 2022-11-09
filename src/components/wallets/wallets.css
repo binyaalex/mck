@@ -30,7 +30,7 @@
 }
 
 .walletIconsBox-title {
-  color: #000;
+  color: var(--primary);
   text-transform: capitalize;
   font-size: 14px;
   line-height: 20px;
