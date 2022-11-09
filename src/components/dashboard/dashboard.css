@@ -185,13 +185,17 @@ div[data-arrow="right"] {
   /* color: #888; */
   line-height: 14px;
   margin: 0;
+  font-weight: bold;
 }
 
 .product-box__price {
   font-size: 14px;
-  /* color: #555; */
   line-height: 20px;
-  font-weight: 600;
+  /* color: #555; */
+}
+
+.bold {
+  font-weight: bold !important;
 }
 
 .product-box__name {
