@@ -42,7 +42,7 @@ export default function BusinessPayment({ credit = false }) {
               <ArrowBackIcon />
             </span>
             <h1 className="templateTitle">
-              {t(credit ? "Load E-Credit To Wallet" : "loadMoneyToWallet")}
+              {t("payment at the business")}
             </h1>
           </div>
           <div className="loadMoneyCard">
@@ -57,7 +57,7 @@ export default function BusinessPayment({ credit = false }) {
             </div>
             <ArrowDownwardIcon />
             <h2 className="loadMoneyCard-text">
-              {t("newBalanceAfterTransfers")}
+              {t("payment amount after benefit of 35%")}
             </h2>
             <h1 className="loadMoneyCard-price">{money?.toFixed(0) || 0}</h1>
             <div className="loadMoneyCard-btn">
@@ -68,7 +68,7 @@ export default function BusinessPayment({ credit = false }) {
                   navigate("/checkout");
                 }}
               >
-                {t(credit ? "Load E-Credit" : "loadMoney")}
+                {t("pay")}
               </Button>
             </div>
           </div>
