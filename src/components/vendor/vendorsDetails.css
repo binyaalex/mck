@@ -192,7 +192,7 @@
 }
 
 .vendorAllListBlock {
-  margin: 30px 0;
+  /* margin: 30px 0; */
 }
 
 .vendorAllListBlock .module-heading__title {
@@ -210,6 +210,15 @@
 
 .vendorAllListBlock .categoryList {
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.categoryList__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 99px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 991px) {

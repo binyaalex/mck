@@ -22,6 +22,7 @@ export default function AllVendor() {
   const [selectedTab, setSelectedTab] = useState({ id: "all", title: "all" }); // eslint-disable-line
   const [categories, setCategories] = useState([]);
   const [merchantsList, setMerchantsList] = useState(merchants);
+  console.log(merchants);
 
   // const handleChangeTab = (e, newValue) => {
   //   if (newValue === "all") {
@@ -99,7 +100,7 @@ export default function AllVendor() {
 
       <div className="pageTemplate">
         <div className="container">
-          <ScrollingCarousel>
+          {/* <ScrollingCarousel>
             <Tabs
               value={selectedTab.id}
               // onChange={handleChangeTab}
@@ -114,8 +115,8 @@ export default function AllVendor() {
                 </Tab>
               ))}
             </Tabs>
-          </ScrollingCarousel>
-          {selectedTab.id === "all" && (
+          </ScrollingCarousel> */}
+          {/* {selectedTab.id === "all" && (
             <div className="vendorAllListBlock">
               <h6 className="module-heading__title">{t("popularVendors")}</h6>
               <ul className="categoryList">
@@ -153,7 +154,7 @@ export default function AllVendor() {
                 )}
               </ul>
             </div>
-          )}
+          )} */}
 
           <div className="vendorAllListBlock">
             <h6 className="module-heading__title">
@@ -166,8 +167,8 @@ export default function AllVendor() {
                 merchantsList.map((item) => (
                   <>
                     <li className="categoryList__block">
-                      <div className="category-box text-center">
-                        <span className="category-boxSubTitle">{item.km}</span>
+                      {/* <div className="category-box text-center"> */}
+                        {/* <span className="category-boxSubTitle">{item.km}</span> */}
                         <div className="category-box__img">
                           <img
                             src={item.image}
@@ -176,7 +177,7 @@ export default function AllVendor() {
                           />
                         </div>
                         <h6 className="category-box__title">{item.title}</h6>
-                      </div>
+                      {/* </div> */}
                     </li>
                   </>
                 ))
