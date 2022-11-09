@@ -85,7 +85,7 @@ function PaymentHistory() {
 
   return (
     <div>
-      <Header />
+      <Header isFull={true} />
       <div className="paymentHestoryTemplate">
         <div className="container">
           <div className="templateHeading">
