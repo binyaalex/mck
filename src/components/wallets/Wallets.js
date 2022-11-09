@@ -28,8 +28,8 @@ export default function Wallets() {
   const [email, setEmail] = useState("");
   const [purpose, setPurpose] = useState("");
 
-  useEffect(() => {
-    if (!user?.id) return navigate("/login");
+  // useEffect(() => {
+  //   if (!user?.id) return navigate("/login");
     // if (!user?.result?.id) {
     //   if (window?.B24Chat?.instance) {
     //     const instance = window?.B24Chat?.instance;
@@ -39,8 +39,8 @@ export default function Wallets() {
     //     return navigate("/");
     //   }
     // }
-    setMaxAmount(user?.money || 0);
-  }, [user, navigate]);
+  //   setMaxAmount(user?.money || 0);
+  // }, [user, navigate]);
 
   const onSend = () => {
     dispatch(

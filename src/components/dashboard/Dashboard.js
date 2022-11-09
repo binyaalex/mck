@@ -35,6 +35,7 @@ import { MdToys } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
 import { GiTwoCoins } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
+import TollIcon from '@mui/icons-material/Toll';
 
 const screenWidth = window.innerWidth;
 let makeProductsPerPage = 10;
@@ -353,7 +354,7 @@ export default function Dashboard() {
                               <span className="product-box__price">
                                 {product?.credit && (
                                   <>
-                                    <GiTwoCoins/>{" "}{product.credit} +{" "} 
+                                    <TollIcon/>{" "}{product.credit} +{" "} 
                                   </>
                                 )}
                                 ₪{product?.price || 0}
