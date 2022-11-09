@@ -168,12 +168,12 @@ export default function Dashboard() {
     <>
       <div className="dashboard-tamplate">
         {/* <Header /> */}
-        <NewHeader />
+        <NewHeader isFull={true} />
 
         <div className="container">
           <div className="block-slider">
             <div className="module-heading">
-  
+
               <CouponsList />
 
               <OtherCategories slider={false} categories={otherCategoriesArr} />
@@ -292,81 +292,81 @@ export default function Dashboard() {
             <ul className="product-Module">
               {filterProducts.length > 0
                 ? currentFilterProducts.map((product) => (
-                    <>
-                      <li
-                        className="product-Module__list isLink"
-                        onClick={() => {
-                          // if (product.imagename === "booking") {
-                          //   navigate("/company", {
-                          //     state: { isBookingApp: true },
-                          //   });
-                          // } else {
-                          navigate(`/product/${product.id}`, {
-                            state: { id: product.id },
-                          });
-                          // }
-                        }}
-                      >
-                        <div className="product-box">
-                          <div
-                            className="product-box__img"
-                            style={{ backgroundImage: `url(${product.image})` }}
-                          >
-                            <div className="product-box__likeBtn">
-                              <FavoriteBorderOutlinedIcon
-                                onClick={() => handleFavChange()}
-                              />
-                            </div>
-                            {product?.discount && (
-                              <div className="product-box__discount">
-                                <span className="product-box__off">
-                                  {product.discountType ? "" : "-"}
-                                  {product.discount}
-                                  {product.discountType}
-                                </span>
-                              </div>
-                            )}
+                  <>
+                    <li
+                      className="product-Module__list isLink"
+                      onClick={() => {
+                        // if (product.imagename === "booking") {
+                        //   navigate("/company", {
+                        //     state: { isBookingApp: true },
+                        //   });
+                        // } else {
+                        navigate(`/product/${product.id}`, {
+                          state: { id: product.id },
+                        });
+                        // }
+                      }}
+                    >
+                      <div className="product-box">
+                        <div
+                          className="product-box__img"
+                          style={{ backgroundImage: `url(${product.image})` }}
+                        >
+                          <div className="product-box__likeBtn">
+                            <FavoriteBorderOutlinedIcon
+                              onClick={() => handleFavChange()}
+                            />
                           </div>
-                          <div className="product-box__info">
-                            <div className="product-box__infoTop">
-                              <div className="product-box__titleAndLoc">
-                                <h6 className="product-box__brand">
-                                  {product.title}
-                                </h6>
-                                <div className="product-box__Loc">
-                                  <MdLocationOn/>
-                                  <h6 className="product-box__brand product-box__LocH">
-                                    הרצליה
-                                  </h6>
-                                </div>
-                              </div>
-                              <span className="product-box__price">
-                                {/* {product?.oldPrice && ( */}
-                                  <>
-                                    <s>₪99</s>&nbsp;
-                                    {/* <s>{product.oldPrice}₪</s>&nbsp; */}
-                                  </>
-                                {/* )} */}
-                             </span>                              
-                            </div>
-                            <div className="product-box__priceDiv">
-                              <span className="product-box__price">
-                                {product?.credit && (
-                                  <>
-                                    <GiTwoCoins/>{" "}{product.credit} +{" "} 
-                                  </>
-                                )}
-                                ₪{product?.price || 0}
+                          {product?.discount && (
+                            <div className="product-box__discount">
+                              <span className="product-box__off">
+                                {product.discountType ? "" : "-"}
+                                {product.discount}
+                                {product.discountType}
                               </span>
                             </div>
-                            {/*<h5 className="product-box__name">*/}
-                            {/*  3 {t("boxSimple")}{" "}*/}
-                            {/*</h5>*/}
-                          </div>
+                          )}
                         </div>
-                      </li>
-                    </>
-                  ))
+                        <div className="product-box__info">
+                          <div className="product-box__infoTop">
+                            <div className="product-box__titleAndLoc">
+                              <h6 className="product-box__brand">
+                                {product.title}
+                              </h6>
+                              <div className="product-box__Loc">
+                                <MdLocationOn />
+                                <h6 className="product-box__brand product-box__LocH">
+                                  הרצליה
+                                </h6>
+                              </div>
+                            </div>
+                            <span className="product-box__price">
+                              {/* {product?.oldPrice && ( */}
+                              <>
+                                <s>₪99</s>&nbsp;
+                                {/* <s>{product.oldPrice}₪</s>&nbsp; */}
+                              </>
+                              {/* )} */}
+                            </span>
+                          </div>
+                          <div className="product-box__priceDiv">
+                            <span className="product-box__price">
+                              {product?.credit && (
+                                <>
+                                  <GiTwoCoins />{" "}{product.credit} +{" "}
+                                </>
+                              )}
+                              ₪{product?.price || 0}
+                            </span>
+                          </div>
+                          {/*<h5 className="product-box__name">*/}
+                          {/*  3 {t("boxSimple")}{" "}*/}
+                          {/*</h5>*/}
+                        </div>
+                      </div>
+                    </li>
+                  </>
+                ))
                 : t("No products")}
             </ul>
             {/* <ChatBot /> */}

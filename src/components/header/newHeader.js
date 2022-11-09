@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import TollIcon from '@mui/icons-material/Toll';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import InfoIcon from '@mui/icons-material/Info';
-const NewHeader = () => {
+const NewHeader = ({ isFull }) => {
     return (
         <div className="header">
             <div className="top">
@@ -29,36 +29,37 @@ const NewHeader = () => {
                 </div>
 
             </div>
-            <div className="bottom">
-                <div className="par">
-                    <div className="balanceH">מטבעות שוק</div>
-                    <div className="balanceAmount">
-                        1200
-                        <TollIcon sx={{ color: 'var(--primary)' }}
-                        />
+            {isFull ?
+                <div className="bottom">
+                    <div className="par">
+                        <div className="balanceH">מטבעות שוק</div>
+                        <div className="balanceAmount">
+                            1200
+                            <TollIcon sx={{ color: 'var(--primary)' }}
+                            />
+                        </div>
                     </div>
-                </div>
 
 
-                <div className='collect'>
-                    <InfoIcon />
-                    <span>איך לצבור</span>
-                    <TollIcon
-                        fontSize="small"
-                        sx={{ color: 'var(--primary)' }}
-                    />
+                    <div className='collect'>
+                        <InfoIcon />
+                        <span>איך לצבור</span>
+                        <TollIcon
+                            fontSize="small"
+                            sx={{ color: 'var(--primary)' }}
+                        />
 
-                    {/* <KeyboardArrowLeftIcon */}
-                    {/* sx={{ color: 'var(--primary)' }} */}
-                    {/* /> */}
-                </div>
-                <div className="notificationBlock">
-                    <Button className="dropBtn">
-                        <NotificationsNoneIcon />
-                        <span className="subCount">3</span>
-                    </Button>
-                </div>
-                {/* <form className="search-container active-search">
+                        {/* <KeyboardArrowLeftIcon */}
+                        {/* sx={{ color: 'var(--primary)' }} */}
+                        {/* /> */}
+                    </div>
+                    <div className="notificationBlock">
+                        <Button className="dropBtn">
+                            <NotificationsNoneIcon />
+                            <span className="subCount">3</span>
+                        </Button>
+                    </div>
+                    {/* <form className="search-container active-search">
                         <div className="search-container__btn">
                             <SearchOutlinedIcon />
                         </div>
@@ -75,8 +76,9 @@ const NewHeader = () => {
                         </div>
                     </form> */}
 
-                {/* </div> */}
-            </div>
+                    {/* </div> */}
+                </div>
+                : null}
         </div>
     )
 }
