@@ -1,5 +1,5 @@
 .walletTamplate {
-  /* padding: 60px 0; */
+  padding: 20px 0;
 }
 
 .walletIcons {
@@ -135,7 +135,13 @@
   direction: ltr !important;
 }
 
-@media only screen and (max-width: 767px) {
+.walletBtns .blueBtn {
+  background-color: var(--secondary) !important;
+  color: var(--primary) !important;
+  font-weight: bold !important;
+}
+
+/* @media only screen and (max-width: 767px) { */
   .walletIcons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -153,4 +159,4 @@
   .moneyBlock-product-img {
     width: 50%;
   }
-}
+/* } */
