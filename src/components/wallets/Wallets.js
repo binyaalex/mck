@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 
 import Header from "../header/Header";
+import NewHeader from "../header/newHeader";
 import CouponList from "./couponList/CouponList";
 import { sendMoney } from "../../redux/actions-exporter";
 
@@ -59,7 +60,7 @@ export default function Wallets() {
 
   return (
     <div>
-      <Header />
+      <NewHeader isFull={true} />
       <div className="walletTamplate">
         <div className="container">
           <div className="walletIcons">
@@ -83,7 +84,7 @@ export default function Wallets() {
               <LocalAtmIcon />
               <h6 className="walletIconsBox-title">{t("loadMoney")}</h6>
             </div>
-            <div
+            {/* <div
               className="walletIconsBox isLink"
               onClick={() => {
                 navigate("/loadcredit");
@@ -91,8 +92,8 @@ export default function Wallets() {
             >
               <LocalAtmIcon />
               <h6 className="walletIconsBox-title">{t("Load E-Credit")}</h6>
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className="walletIconsBox isLink"
               onClick={() => {
                 navigate("/creaditcard");
@@ -100,7 +101,7 @@ export default function Wallets() {
             >
               <CreditScoreIcon />
               <h6 className="walletIconsBox-title">{t("creditCardOorder")}</h6>
-            </div>
+            </div> */}
             <div
               className="walletIconsBox isLink"
               onClick={() => {
