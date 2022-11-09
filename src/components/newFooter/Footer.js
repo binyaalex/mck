@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { BrowserView, MobileView } from "react-device-detect";
-
 //icons
 import HomeIcon from "@mui/icons-material/Home";
 // import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
@@ -23,11 +22,12 @@ import chatIcon from "../../assets/images/footer/chat.png";
 import GrayIcon from "./GrayIcon";
 
 import "./Footer.css";
+import { useEffect, useState } from "react";
 
 const containerArr = [
   {
     img: <FiHome />,
-    link: "",
+    link: "/",
     title: "ראשי",
   },
   {
@@ -42,14 +42,17 @@ const containerArr = [
   // },
   {
     img: <BsWallet2 />,
-    link: "",
+    link: "/wallet",
     title: "ארנק",
   },
 ];
 
 const Footer = () => {
+  // const [url, setUrl] = useState();
   let url = window.location.pathname;
-
+  // useEffect(() => {
+  //   setUrl(getUrl)
+  // }, []);
   return (
     <>
       {/* <BrowserView>
@@ -72,29 +75,29 @@ const Footer = () => {
         </div>
       </BrowserView>
       <MobileView> */}
-        <div>
-          <footer className="footer">
-            <div className="sosAndGray">
-              <div className="grayIcons">
-                {containerArr.map((el, i) => {
-                  return (
-                    <GrayIcon
-                      img={el.img}
-                      i={i}
-                      url={url}
-                      key={i}
-                      link={el.link}
-                      title={el.title}
-                    />
-                  );
-                })}
-              </div>
+      <div>
+        <footer className="footer">
+          <div className="sosAndGray">
+            <div className="grayIcons">
+              {containerArr.map((el, i) => {
+                return (
+                  <GrayIcon
+                    img={el.img}
+                    i={i}
+                    url={url}
+                    key={i}
+                    link={el.link}
+                    title={el.title}
+                  />
+                );
+              })}
             </div>
-            <div className="mainChat">
-              <img alt="" className="chat" src={chatIcon} />
-            </div>
-          </footer>
-        </div>
+          </div>
+          <div className="mainChat">
+            <img alt="" className="chat" src={chatIcon} />
+          </div>
+        </footer>
+      </div>
       {/* </MobileView> */}
     </>
   );

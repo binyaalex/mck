@@ -66,9 +66,11 @@
 .customizer.open {
   right: 0;
 }
+
 .border-left-blue-grey.border-left-lighten-4 {
   border-left: 1px solid #cfd8dc !important;
 }
+
 .customizer {
   position: fixed;
   z-index: 9;
@@ -90,6 +92,7 @@
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 .customizer a.customizer-close {
   color: #000;
 }
@@ -102,10 +105,12 @@
   width: auto;
   padding: 7px;
 }
+
 .customizer a.customizer-toggle {
   display: block;
   color: #6967ce;
 }
+
 .customizer .customizer-toggle {
   line-height: 36px;
   position: absolute;
@@ -129,6 +134,7 @@
   height: 90%;
   overflow: scroll;
 }
+
 /*This is for Side bar buttons*/
 
 /* this is for sidebar chat img */
@@ -172,7 +178,7 @@
   width: 100%;
 }
 
-.footer .sosAndGray > a {
+.footer .sosAndGray>a {
   margin-right: 36px;
 }
 
@@ -202,12 +208,12 @@
   width: 22px;
 }
 
-.footer .grayIconLink > svg {
+.footer .grayIconLink>svg {
   color: var(--primary);
   font-size: 27px;
 }
 
-.footer .grayIconLinkActive > svg {
+.footer .grayIconLinkActive>svg {
   color: var(--primary);
   font-size: 30px;
 }
@@ -236,4 +242,9 @@
 
 .grayIconLink {
   text-align: center;
+  width: 25%
+}
+
+.chosen {
+  border-bottom: 5px solid var(--secondary);
 }

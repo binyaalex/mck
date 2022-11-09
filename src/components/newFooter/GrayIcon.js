@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 
 const GrayIcon = ({ img, i, url, link, title }) => {
-  let className = "grayIconLink";
-  // if (url === '/' && i === 2) {
-  // 	className = 'grayIconLink grayIconLinkActive'
-  // } else if (url === '/notifications' && i === 1) {
-  // 	className = 'grayIconLink grayIconLinkActive'
-  // } else if (url === '/marketplace' && i === 0) {
-  // 	className = 'grayIconLink grayIconLinkActive'
-  // }
+
+  let cn = "grayIconLink"
+  if (url === '/' && i === 0) {
+    cn = 'grayIconLink chosen'
+  } else if (url === '/notifications' && i === 1) {
+    cn = 'grayIconLink chosen'
+  } else if (url === '/wallet' && i === 2) {
+    cn = 'grayIconLink chosen'
+  }
+  console.log(cn);
 
   return (
-    <Link to={link} className={className}>
+    <Link to={link} className={cn}>
       {img}
       <div className="grayIconTitle">{title}</div>
     </Link>
