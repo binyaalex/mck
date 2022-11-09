@@ -6,7 +6,7 @@ import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Button from "@mui/material/Button";
 import logo from "../../assets/images/logo.png"
 import MenuIcon from "@mui/icons-material/Menu";
-import TollIcon from '@mui/icons-material/Toll';
+import { GiTwoCoins } from "react-icons/gi";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import InfoIcon from '@mui/icons-material/Info';
 const NewHeader = ({ isFull }) => {
@@ -32,10 +32,10 @@ const NewHeader = ({ isFull }) => {
             {isFull ?
                 <div className="bottom">
                     <div className="par">
-                        <div className="balanceH">מטבעות שוק</div>
+                        <div className="balanceH">מטבע שוק</div>
                         <div className="balanceAmount">
                             1200
-                            <TollIcon sx={{ color: 'var(--primary)' }}
+                            <GiTwoCoins sx={{ color: 'var(--primary)' }}
                             />
                         </div>
                     </div>
@@ -44,8 +44,8 @@ const NewHeader = ({ isFull }) => {
                     <div className='collect'>
                         <InfoIcon />
                         <span>איך לצבור</span>
-                        <TollIcon
-                            fontSize="small"
+                        <GiTwoCoins
+                            fontSize="large"
                             sx={{ color: 'var(--primary)' }}
                         />
 

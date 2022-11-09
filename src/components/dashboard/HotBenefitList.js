@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ScrollingCarousel } from "@trendyol-js/react-carousel";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import TollIcon from '@mui/icons-material/Toll';
+import { GiTwoCoins } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
 import { getMerchants } from "../../redux/actions-exporter";
 
@@ -185,7 +185,7 @@ export default function HotBenefitList(props) {
                     </div> */}
 
                     <div className="new">
-                      <h5 className="hotBenefitNew">₪{item.new} + {item.coins}<TollIcon /></h5>
+                      <h5 className="hotBenefitNew">₪{item.new} + {item.coins}<GiTwoCoins /></h5>
                     </div>
                   </div>
                 </li>

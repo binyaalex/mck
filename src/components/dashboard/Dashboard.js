@@ -350,7 +350,7 @@ export default function Dashboard() {
                             </span>
                           </div>
                           <div className="product-box__priceDiv">
-                            <span className="product-box__price">
+                            <span className="product-box__price bold">
                               {product?.credit && (
                                 <>
                                   <GiTwoCoins />{" "}{product.credit} +{" "}
