@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
-const QuantitySelector = ({onChange, value, minValue = 0}) => {
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove'; const QuantitySelector = ({ onChange, value, minValue = 0 }) => {
   const [count, setCount] = useState(0)
 
   const handleAddQuantity = e => {
@@ -31,11 +31,12 @@ const QuantitySelector = ({onChange, value, minValue = 0}) => {
   return (
     <div className="addItemDiv">
       <button onClick={handleLessQuantity} className="minusItem">
-        -
+        <RemoveIcon />
       </button>
       <div className="numbersOfItems">{typeof value ? value : count}</div>
       <button onClick={handleAddQuantity} className="minusItem">
-        +
+        <AddIcon />
+
       </button>
     </div>
   )
