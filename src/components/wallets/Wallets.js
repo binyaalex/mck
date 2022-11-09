@@ -12,7 +12,6 @@ import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 
 import Header from "../header/Header";
-import NewHeader from "../header/newHeader";
 import CouponList from "./couponList/CouponList";
 import { sendMoney } from "../../redux/actions-exporter";
 
@@ -62,7 +61,7 @@ export default function Wallets() {
 
   return (
     <div>
-      <NewHeader isFull={true} />
+      <Header isFull={true} />
       <div className="walletTamplate">
         <div className="container">
           <div className="walletIcons">

@@ -16,7 +16,7 @@
   font-size: 44px;
   margin: 0;
   line-height: 52px;
-  color: #000;
+  color: var(--primary);
 }
 
 .backIcon,
@@ -295,7 +295,7 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) { */
   .templateTitle {
     font-size: 24px;
     line-height: 32px;
@@ -334,9 +334,9 @@
   .cartProduct-box__price {
     padding: 3% 0;
   }
-}
+/* } */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) { */
   .cartBtns {
     grid-template-columns: 1fr;
   }
@@ -429,7 +429,7 @@
     font-size: 10px;
     line-height: unset;
   }
-}
+/* } */
 
 .summaryCard-ListItemsInfo {
   display: flex;

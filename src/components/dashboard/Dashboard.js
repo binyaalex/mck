@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 // import ChatBot from "../chat/ChatBot";
 import Header from "../header/Header";
-import NewHeader from "../header/newHeader";
 import OnlyCategoryList from "../category/OnlyCategoryList";
 
 import {
@@ -168,7 +167,7 @@ export default function Dashboard() {
     <>
       <div className="dashboard-tamplate">
         {/* <Header /> */}
-        <NewHeader isFull={true} />
+        <Header isFull={true} />
 
         <div className="container">
           <div className="block-slider">

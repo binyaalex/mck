@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GiTwoCoins } from "react-icons/gi";
 
-import NewHeader from "../header/newHeader";
+import Header from "../header/Header";
 import { addToCart } from "../../redux/API/cart/cart.action";
 import { getProductById } from "../../redux/API/product/product.action";
 import QuantitySelector from "../quantitySelector";
@@ -46,7 +46,7 @@ export default function ProductDetails() {
   product && console.log(product);
   return (
     <div>
-      <NewHeader />
+      <Header />
       <div className="productDetails">
         <div className="container">
           <div className="row">
